@@ -1,4 +1,19 @@
-# Day27 — Track 3: HITL PR Review Agent
+# Day 27 — Track 3: HITL PR Review Agent (Completed Lab)
+
+## Demo & Results
+Below are the screenshots captured during the evaluation process of the completed Human-In-The-Loop PR Review Agent running via Streamlit:
+
+### 1. Human Approval Flow (Medium Risk PR)
+![Human Approval Flow](image.png)
+*When the confidence score falls between 58% and 72%, the agent pauses the graph execution (`interrupt`) and requires a human to Approve, Reject, or Edit the AI-generated review.*
+
+### 2. Escalation Flow (High Risk PR)
+![Escalation Flow](image%20copy.png)
+*When the confidence score is below 58%, the agent generates specific context-rich questions to gather more information. Once the reviewer submits their answers, a new `synthesize` node re-evaluates the PR and creates a refined review.*
+
+---
+
+## Original Lab Assignment
 
 A 2-hour lab that builds a human-in-the-loop pull-request review agent in **LangGraph**, end-to-end.
 
